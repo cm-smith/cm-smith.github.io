@@ -20,7 +20,16 @@ Look for our blitz on Campus Listserv! Meetings are typically Thursday at 8:00pm
 
 ## Ongoing Projects
 
-## Opportunities Outside of Campus
+*In the works...*
+
+## Conference Opportunities
+
+Dartmouth College supports the club in both on-campus and off-campus projects.
+This includes potential financial aid to attend conferences around the country:
+
+- [MIT Sloan Sports Analytics Conference](http://www.sloansportsconference.com/) (February)
+- [Carnegie Mellon Sports Analytics
+  Conference](http://www.cmusportsanalytics.com/conference/) (October)
 
 # The List
 
