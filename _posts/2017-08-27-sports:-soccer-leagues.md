@@ -13,15 +13,14 @@ Cup (men's and women's) made headlines. I was hooked by the chants (["I BELIEVE"
 though (FIFA doesn't count...).
 
 {% include figure image_path="/assets/images/soccer_reporter.gif" alt="True
-patriotism..." caption="A true patriot." %}
+patriotism..." caption="What a legend." %}
 
 When I went to college in 2014 several friends were die hard Chelsea fans. (At the 
 time, this was a frustrating hobby for them.) Watching matches on the weekend got me 
 hooked. The lack of commercial breaks, unreal skill, and ridiculous commentary 
 is addicting.
 
-{% include video id="WYEbATNhAjc" provider="youtube" caption="Ray Hudson is an
-national jewel for England." %}
+{% include video id="WYEbATNhAjc" provider="youtube" %}
 
 I started watching matches more often. I began appreciating the strategies,
 subtle skills (first touches), and frequenting r/soccer. However, I still
