@@ -10,17 +10,23 @@ categories: [Sports]
 Our goal: celebrate your love for sports with us, learning and applying technical 
 skills, and start answering the difficult questions.
 
-# How to Get Involved
+Just trying to win fantasy football? Trying to go to attend [MIT Sloan Sports Analytics
+Conference](http://www.sloansportsconference.com/) with original research? Get
+involved with DSA.
 
-Look for our blitz on Campus Listserv!
+## How to Get Involved
 
-Meetings typically on Thursday at 8:00pm.
+Look for our blitz on Campus Listserv! Meetings are typically Thursday at 8:00pm.
 
-# Ongoing Projects
+## Ongoing Projects
 
-
+## Opportunities Outside of Campus
 
 # The List
+
+Entirely new to the field of sports analytics? Looking to get your feet wet
+with some popular resources? Check out our list of blogs, writers, and
+podcasts.
 
 ## Blogs
 
