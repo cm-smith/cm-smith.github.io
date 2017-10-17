@@ -7,9 +7,6 @@ categories: [Sports]
 
 # Welcome to the Club
 
-Our goal: celebrate your love for sports with us, learning and applying technical 
-skills, and start answering the difficult questions.
-
 Just trying to win fantasy football? Trying to go to attend [MIT Sloan Sports Analytics
 Conference](http://www.sloansportsconference.com/) with original research? Get
 involved with DSA.
