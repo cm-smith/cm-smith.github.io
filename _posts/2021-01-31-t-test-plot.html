@@ -1,0 +1,60 @@
+---
+layout: post
+title: T-test Power Plot
+date: 2021-01-31
+---
+
+<!-- https://katex.org/docs/autorender.html -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+{% include t-test-power-graph.html %}
+
+<br>
+<p id="derivation">
+The derivation for this plot comes from the following equation, which can be reordered to solve for sample size or effect size:
+
+$$N = \frac{(\Phi^{-1}(\beta)+\Phi^{-1}(1-\alpha/2))^2}{(\tau^2/\sigma^2)\times\gamma(1-\gamma)}$$
+
+Each variables is defined below:
+
+<table>
+    <tr>
+        <th>Variable</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>\(N\)</td>
+        <td>Total sample size in experiment</td>
+    </tr>
+    <tr>
+        <td>\(\gamma\)</td>
+        <td>Percent of sample size in the treatment group</td>
+    </tr>
+    <tr>
+        <td>\(\tau\)</td>
+        <td>Absolute effect size</td>
+    </tr>
+    <tr>
+        <td>\(\sigma\)</td>
+        <td>Standard deviation</td>
+    </tr>
+    <tr>
+        <td>\(\alpha\) &#42;</td>
+        <td>Statistical significance</td>
+    </tr>
+    <tr>
+        <td>\(\beta\) &#42;</td>
+        <td>Statistical power</td>
+    </tr>
+    <tr>
+        <td>\(\Phi\) &#42;</td>
+        <td>Cumulative density function of the standard normal distribution</td>
+    </tr>
+</table>
+&#42; <em>Default values are 5% significance and 80% power, which have critical values (\(\Phi^{-1}\)) at 1.96 and 0.84, respectively.</em>
+<br>
+<br>
+The source for this derivation is <a href="https://arxiv.org/pdf/1607.00698.pdf">"The Econometrics of Randomized Experiments"</a> (Athey and Imbens, 2016) Section 7.1, Page 34. 
+</p>
