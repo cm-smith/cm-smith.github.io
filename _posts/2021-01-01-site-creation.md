@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Jekyll Basics"
+title: "Site Creation"
 date: 2021-01-01 22:00:13 -0600
-categories: jekyll
+categories: site
 ---
 [*Refer to online documentation here.*](https://jekyllrb.com/)
 
