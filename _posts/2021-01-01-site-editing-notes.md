@@ -1,9 +1,24 @@
 ---
 layout: post
-title: "Site Creation"
-date: 2021-01-01 22:00:13 -0600
+title: "Site Editing Notes"
+date: 2021-01-01 16:00:00 -0600
 categories: site
 ---
+
+*This post is continuously updated while learning on the fly.*
+
+To reduce the complexity in this Github Pages site, the default theme [`minima`](https://github.com/jekyll/minima) is used. Not all files from the theme are copied and saved in this repo. Instead, we have added `gem "minima"` to the `Gemfile` for this Jekyll site. Whenever we serve the site (e.g., `jekyll serve`), the theme templates are imported upon build. We can copy and edit any files from their Github page to personalize the `minima` theme.
+
+# Table of contents
+
+- [Initial Site Setup](#initial-site-setup)
+- [File Structure](#file-structure)
+- [YAML Configurations](#yaml-configurations)
+- [Header](#header)
+- [Posts](#posts)
+
+## Initial Site Setup
+
 [*Refer to online documentation here.*](https://jekyllrb.com/)
 
 Jekyll converts markup languages [<a href="#ref1">1</a>], such as HTML,
@@ -15,10 +30,6 @@ script). Jekyll is a Ruby project and uses
 external plugins (e.g., `gem install ...`) [<a href="#ref2">2</a>]. A
 common, and Jekyll-required, plugin is [`bundler`](https://bundler.io/),
 which maintains dependencies.
-
-## Command Line
-
-The following workflow is commonly used:
 
 ```bash
 # Check dependencies (GCC/Make not listed
@@ -47,7 +58,7 @@ site into the `_site` directory (equivalent to `jekyll build`), as well
 as rebuilding it any times changes are made with the site viewable on
 the local server (http://localhost:4000) [<a href="#ref3">3</a>].
 
-## Directory Layout
+## File Structure
 
 ```
 .
@@ -86,12 +97,9 @@ Overview of the documents and their respective functions:
 | index.html or index.md | Provided the file has a YAML Front Matter section, it will be transformed by Jekyll. |
 | Other Files/Folders | Every other directory/file (such as css and images folders) will be copied verbatim to the generated site. |
 
-## Configuration Notes
+## YAML Configurations
 
-- YAML stands for "YAML Ain't Markup Language" with its primary purpose being "a human friendly data [serialization](https://en.wikipedia.org/wiki/Serialization) standard" [<a href="#ref4">4</a>].
-- YAML supports Jekyll's configuration (`_config.yml`) and Front Matter content.
-- [Front Matter](https://jekyllrb.com/docs/front-matter/) specifies common inputs for a post, such as layout, title, author, date, permalink, category, and tags.
-- [Liquid](https://shopify.github.io/liquid/) is supported by Jekyll and can be used to fetch YAML variables. Liquid must be within HTML, which may require embedding HTML tags in markup files.
+YAML stands for "YAML Ain't Markup Language" with its primary purpose being "a human friendly data [serialization](https://en.wikipedia.org/wiki/Serialization) standard" [<a href="#ref4">4</a>]. YAML supports Jekyll's configuration (`_config.yml`) and Front Matter content. [Front Matter](https://jekyllrb.com/docs/front-matter/) specifies common inputs for a post, such as layout, title, author, date, permalink, category, and tags. [Liquid](https://shopify.github.io/liquid/) is supported by Jekyll and can be used to fetch YAML variables. Liquid must be within HTML, which may require embedding HTML tags in markup files.
 
 Below is an example for setting default configurations for the Front
 Matter in the site.
@@ -127,13 +135,42 @@ new_variable: hotdog
 
 The area above is **Front Matter**. The variables in this section can be referenced with **Liquid** as:
 
-My favorite food is <p>{{ page.new_variable }}<p>.
+You would never guess the answer was <p>{{ page.new_variable }}<p>.
 
 Additionally, we can reference variables set in `_config.yml`:
 
-My favorite animal is <p>{{ site.track_this_variable }}<p>.
+Another site-defined variable is <p>{{ site.track_this_variable }}<p>.
 ```
 {% endraw %}
+
+## Header
+
+By default, any markdown files in the main directory will appear in the header. To specify only a subset of files, as well as the order, you can edit the `_config.yml` file:
+
+```
+# _config.yml
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+```
+
+## Posts
+
+- CDNs used to fetch centrally located javascript files
+    - More info about "Content Delivery Networks" can be found [here](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/).
+    - **Major limitation** is not being able to develop offline without broken functionality.
+- Post-specific styling or scripting
+    - You can add `<style>` and `<script>` components to the top of the markdown file to embed CSS and Javascript functionality.
+- Linking to other pages in the site
+    - [Link to pages](https://jekyllrb.com/docs/liquid/tags/#link): {% raw %}`{% link dir/page.html %}`{% endraw %}
+    - [Link to posts](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts): {% raw %}`{% post_url yyyy-MM-dd-post-name %}`{% endraw %}
+- Creating drop-down components
+    - You can use the [`<details>` HTML tag](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61).
+    - Be sure to keep an empty line between the summary tag and the main content; adding new lines (`<br>`) is helpful in formatting
+    - If you want to enable Markdown syntax in the main content, you can specify so in the tag: `<details markdown="1">`.
+- Math syntax
+    - Use MathJax CDN, which maps pretty closely to LaTeX. To append the CDN to a specific post (and account for in-line LaTeX syntax), here is available [code from StackOverflow](https://stackoverflow.com/a/46765337).
 
 ## References
 
